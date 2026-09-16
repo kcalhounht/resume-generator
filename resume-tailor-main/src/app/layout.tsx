@@ -1,0 +1,49 @@
+import { Source_Serif_4, DM_Sans } from "next/font/google";
+import { cookies } from "next/headers";
+import "./globals.css";
+import type { Metadata } from "next";
+import { PAGE_STYLE_COOKIE, parsePageStyle } from "@/lib/appearance";
+import { CaptureIncomingJob } from "@/components/CaptureIncomingJob";
+import { EmbedFrame } from "@/components/EmbedFrame";
+
+const display = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const body = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
+export const metadata: Metadata = {
+  title: "Resume Tailor",
+  description:
+    "Paste your background and a job description to generate ATS-optimized resumes and cover letters.",
+  other: {
+    "resume-tailor-app": "1",
+  },
+};
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const jar = await cookies();
+  const pageStyle = parsePageStyle(jar.get(PAGE_STYLE_COOKIE)?.value);
+
+  return (
+    <html
+      lang="en"
+      data-theme={pageStyle}
+      className={`${display.variable} ${body.variable} h-full`}
+    >
+      <body className="min-h-full">
+        <EmbedFrame />
+        <CaptureIncomingJob />
+        {children}
+      </body>
+    </html>
+  );
+}

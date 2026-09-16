@@ -1,0 +1,20 @@
+# Resume Tailor extension
+
+Add this to Chrome first. Then click the **Resume Tailor** toolbar avatar to dock the app on the right (same Chrome UI as Adobe Acrobat).
+
+## After it is in the browser
+
+1. Puzzle piece → pin **Resume Tailor**.
+2. Open a job posting.
+3. Click the Resume Tailor icon. Chrome opens the right-hand panel.
+
+A website button cannot open that panel unless the extension is already installed. After it is, **Open on the right** in the app docks it. The toolbar avatar does the same.
+
+## Publish
+
+See [STORE.md](STORE.md). Set `NEXT_PUBLIC_CHROME_WEBSTORE_URL` so **Add to Chrome** (`/install`) opens the store listing.
+
+## Developer
+
+1. `chrome://extensions` → Developer mode → **Load unpacked** → this folder.
+2. A welcome tab explains pinning. Click the toolbar icon to open the panel.
