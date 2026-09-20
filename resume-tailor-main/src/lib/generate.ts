@@ -27,7 +27,7 @@ Hard rules:
 4. Each experience MUST include:
    - overview: 1-2 sentences (about 25-45 words) describing what the company does and the candidate's core responsibility in that role, tailored toward the target JD.
    - exactly 7 bullet points of accomplishments.
-5. Each bullet must be professional and specific (~25-40 words). Describe concrete work done.
+5. Each bullet must be professional and specific (~30-40 words). Describe concrete work done.
 6. Include hard numbers (counts, scale, volume, latency, users, datasets, dollars) but NEVER invent unrealistic percentages.
 7. Include slightly MORE relevant experience breadth than the JD strictly requires.
 8. Mirror JD terminology and hard skills heavily for ATS scoring.
